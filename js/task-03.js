@@ -12,22 +12,18 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-const newLi = document.createElement(`li`);
-const secondLi = document.createElement(`li`);
-const thirdLi = document.createElement(`li`);
-const picture = document.createElement(`img`);
-picture.setAttribute(`url`, 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-picture.setAttribute(`alt`,'White and Black Long Fur Cat');
-newLi.insertAdjacentHTML("beforeBegin", picture);
-const elsePicture = document.createElement(`img`);
-elsePicture.setAttribute(`url`, 'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-elsePicture.setAttribute(`alt`, 'Orange and White Koi Fish Near Yellow Koi Fish');
-secondLi.insertAdjacentHTML("beforeBegin", elsePicture);
-const secondImg = document.createElement(`img`);
-secondImg.setAttribute(`url`, 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-secondImg.setAttribute(`alt`,'Group of Horses Running');
-thirdLi.insertAdjacentHTML("beforeBegin", secondImg);
-const setEl = document.querySelector(`.gallery`)
-setEl.insertAdjacentHTML("beforeBegin", newLi);
-setEl.insertAdjacentHTML("beforeBegin", secondLi);
-setEl.insertAdjacentHTML("beforeBegin", thirdLi);
+
+function createli(){
+let li = document.createElement('li');
+const pictureTitle = document.createElement('img');
+pictureTitle.innerHTML = `<img src:${images[0].url} alt:${images[1].alt} >`
+const value = images.someProperty;
+li.insertAdjacentHTML(`afterbegin`, `${pictureTitle}`);
+for (let i=0; i<3; i++) { 
+// document.getElementsByClassName(`gallery`)[0].appendChild(li);
+// document.getElementsByClassName(`gallery`)[1].appendChild(li);
+// document.getElementsByClassName(`gallery`)[2].appendChild(li);
+document.getElementsByClassName(`gallery`)[0].appendChild(li.cloneNode(true));
+}
+}
+console.log(createli());
