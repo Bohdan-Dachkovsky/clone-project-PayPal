@@ -13,17 +13,27 @@ const images = [
   },
 ];
 
-function createli(){
-let li = document.createElement('li');
-const pictureTitle = document.createElement('img');
-pictureTitle.innerHTML = `<img src:${images[0].url} alt:${images[1].alt} >`
-const value = images.someProperty;
-li.insertAdjacentHTML(`afterbegin`, `${pictureTitle}`);
-for (let i=0; i<3; i++) { 
-// document.getElementsByClassName(`gallery`)[0].appendChild(li);
-// document.getElementsByClassName(`gallery`)[1].appendChild(li);
-// document.getElementsByClassName(`gallery`)[2].appendChild(li);
-document.getElementsByClassName(`gallery`)[0].appendChild(li.cloneNode(true));
-}
-}
-console.log(createli());
+// function createli(){
+// let li = document.createElement('li');
+// const pictureTitle = document.createElement('img');
+// pictureTitle.innerHTML = `<img src:${images[0].url} alt:${images[1].alt} >`
+// // const value = images.someProperty;
+// li.insertAdjacentHTML(`afterbegin`, `${pictureTitle}`);
+// for (let i=0; i<3; i++) { 
+// // document.getElementsByClassName(`gallery`)[0].appendChild(li);
+// // document.getElementsByClassName(`gallery`)[1].appendChild(li);
+// // document.getElementsByClassName(`gallery`)[2].appendChild(li);
+// document.getElementsByClassName(`gallery`)[0].appendChild(li.cloneNode(true));
+// }
+// }
+// console.log(createli());
+const createli = document.querySelector(`.gallery`);
+const makeGalleryCard = ({ url, alt } = {}) => {
+  return `<li><img src="${url}"  alt="${alt}" ></li>`;
+};
+const galleryLiElements = images
+  .map((pic) => {
+    return makeGalleryCard(pic);
+  })
+console.log(galleryLiElements);
+createli.insertAdjacentHTML(`beforeend`, galleryLiElements);

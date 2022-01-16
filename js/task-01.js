@@ -8,19 +8,13 @@ setClass.setAttribute(`class`, `new-page`);
 // ul.style.class = `new-page`
 const sumFirstElements = document.querySelectorAll(`#categories > li > .new-page > li`);
 console.log(sumFirstElements.length);
-const numberSecondElements = document.querySelectorAll(`#categories > li > .listOfProduct > li`);
+const numberSecondElements = document.querySelectorAll(`#categories > li > ul`);
+// const number = numberSecondElements[1];
 console.log(numberSecondElements.length);
-const lengthThirdElements = document.querySelectorAll(`#categories > li > .listOflanguage > li`);
-console.log(lengthThirdElements.length);
-// const setSecondAtt = document.querySelector(`#categories > li > ul`);
-// setSecondAtt.setAttribute(`class`, `new-title`);
-// const sumSecondElements = document.querySelectorAll(`#categories > li > .new-title > li`);
-// console.log(sumSecondElements.length);
-// const sumSecondElements = document.querySelectorAll(`#categories .item`).parentNode;
-// console.log(sumOfElements.length);
-// const sumThirdElements = document.querySelectorAll(`#categories .item`).parentNode;
-// console.log(sumOfElements.);
+const bodyEl = document.body;
+const numberThirdElements = document.querySelectorAll(`#categories > li > ul`)[2].childElementCount;
 
-// const listEl = document.querySelector('.list');
-// const listItemsEl = listEl.children;
-// console.log(listItemsEl.length);
+
+console.log(numberThirdElements);
+
+

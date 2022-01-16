@@ -8,8 +8,11 @@ const elInput = document.querySelector(`#name-input`);
 console.log(elInput);
 const someText = document.querySelectorAll(`span[id="name-output"]`);
 const titleH1 = document.querySelectorAll(`body > h1`);
-if (document.getElementById('elInput').value !== '') {
-    titleH1 === this.value
+if (document.getElementById('#name-input').value !== '') {
+    someText.innerText === someText.innerText
 } else {
-    titleH1.innerText = "Anonymous";
+    titleH1.innerText = someText.innerText;
 }        
+if (document.getElementById('#name-input').value === '') {
+    someText.innerText === someText.innerText;
+};
