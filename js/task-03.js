@@ -28,12 +28,14 @@ const images = [
 // }
 // console.log(createli());
 const createli = document.querySelector(`.gallery`);
-const makeGalleryCard = ({ url, alt } = {}) => {
+const doGalleryCard = ({ url, alt } = {}) => {
+
   return `<li><img src="${url}"  alt="${alt}" ></li>`;
+  
 };
 const galleryLiElements = images
   .map((pic) => {
-    return makeGalleryCard(pic);
+    return doGalleryCard(pic);
   })
 console.log(galleryLiElements);
 createli.insertAdjacentHTML(`beforeend`, galleryLiElements);
