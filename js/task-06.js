@@ -1,14 +1,14 @@
-var words = document.getElementsByTagName('input');
-for (let i = 0; i < words.length; i++) {
-    words[i].addEventListener('blur', func);
-}
-function func() {
-    if(inputDataLength = 6){
-        this.style.borderColor = 'green';
+
+document.getElementById("validation-input").onblur = function() {
+    console.log(this.value.length);
+    if (this.getAttribute('data-length') > this.value.length) { 
+      this.classList.remove('valid');
+      this.classList.add('invalid');
     } else {
-        this.style.borderColor = 'red';
+      this.classList.remove('invalid');
+      this.classList.add('valid');
     }
-}
+  };
    // var correctLength = this.dataset.length; 
    // var inputDataLength = this.value.length; 
 // input.onblur = function() {
