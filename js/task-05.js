@@ -5,7 +5,7 @@ const onTargetListner = someText.addEventListener(`input`, event => {
     someText.oninput = function() {
         //  titleH1.textContent = this.target.value;  
      if(someText.value !== ``) {     
-        titleH1.innerHTML = someText.value;
+        titleH1.textContent = someText.value;
      }
         else {
             titleH1.textContent = `Anonymous`;   
