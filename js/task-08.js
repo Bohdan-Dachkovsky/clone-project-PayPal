@@ -14,7 +14,5 @@ const objectForm = {
 
 console.log(objectForm);
 event.currentTarget.reset();
-
-
-formButtonEl.addEventListner("submit", handleSubmit);
 };
+formButtonEl.addEventListener("submit", handleSubmit);
